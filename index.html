@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container"> 
+            <nav>
+                <img src="images/logo.jpg" alt="Devanshi" class="logo">
+                <ul>
+                    <li><a href="#"> Home</a></li>
+                    <li><a href="#"> Services</a></li>
+                    <li><a href="#"> Portfolio</a></li>
+                    <li><a href="#"> Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web & Software Developer</p>
+                <h1>Hi! I am <span>Devanshi</span>   Asati <span id="black" >From India</span></h1>
+            </div>
+        </div>
+    </div>
+    <!--about-->
+    <div>
+        <div id="about">
+            <dic class="container">
+                <div class="row">
+                    <div class="about_col_1"><img src="./images/cog_photo.jpg" alt=""></div>
+                    <div class="about-col-2"><h1 class="subtitle">About Me</h1> 
+                    <p>As a CSE enthusiast & engineering student with strong foundation in Web Development, Database management(SQL) and DSA(c and 
+                        c++).I am seeking an opportunity to leverage my technical skills and academic knowledge in dynamic and growth oriented environment. 
+                        My goal is to contribute innovative projects, enhance user experience , and optimize data management systems while continuously 
+                        learning and growing as professional.</p>
+                       <div class="tab_title">
+                        <p class="tab-links active-link" onclick="openTab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="openTab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="openTab('Education')">Education</p>
+                       </div> 
+                       <div class="tab-content active-tab" id="Skills">
+                        <ul>
+                            <li><span>Web Developer</span><br>HTML, CSS, JavaScript</li>
+                            <li><span>Software Developer</span><br>Programming, c, c++, python</li>
+                            <li><span>Database handling</span><br>MySQL, relational database management</li>
+                        </ul>
+                       </div>
+                       <div class="tab-content" id="Experience">
+                        <ul>
+                             <li><span>2023- present</span><br> Content team lead at Entrepreneurship cell</li>
+                        </ul>
+                       </div>
+                       <div class="tab-content" id="Education">
+                        <ul>
+                            <li><span>2021- present</span><br>B.Tech in Computer Science & Engineering <br>
+                            Jabalpur Engineering College <br>CGPA: 7.904
+                        </li>
+                        <li><span>2019-20</span><br> Class 12th( CBSE) <br>
+                           Jawahar Navodaya Vidyalaya <br>percentage: 93.2%</li>
+                            <li><span>2017-18</span><br> Class 10th( CBSE) <br>
+                                Jawahar Navodaya Vidyalaya <br>Percentage: 87.4%</li>
+                        </ul>
+                       </div>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---------------------Services-->
+    <script>
+        var tabLinks= document.getElementsByClassName("tab-links");
+        var tabContents= document.getElementsByClassName("tab-content");
+        function openTab(tabName){
+            for(let tabLink of tabLinks ){
+                tabLink.classList.remove("active-link");
+            }
+            for(let tabContent of tabContents ){
+                tabContent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+             document.getElementById(tabName).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
